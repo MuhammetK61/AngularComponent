@@ -11,5 +11,6 @@ export class NavComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  sitename: string = 'eShopping';
 
 }
