@@ -1,6 +1,8 @@
 <div class="search-div">
     <span><b>Search:</b></span>
-    <input type="text" (input) ='changesearchValue($event)'>
+    <!--  <input type="text" (input) ='changesearchValue($event)'>  -->
+    <input type="text" [(ngModel)] ="searchValue">
+
     <!--Aradığım kelimeyi altta gösteriyor-->
     <span>Your searched for "{{ searchValue }}"</span>
 </div>
