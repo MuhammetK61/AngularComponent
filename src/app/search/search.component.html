@@ -1,8 +1,13 @@
-<div class="search-div">
+<div class="search-div" [ngClass]="{changeBackground: searchValue != ''}">
+    <!--
+        Burdaki ngClass bir tepki veya değişiklik yapmamızı sağlar. 
+        Mesela burda bie şey yazdığımızda arka plan rengini değiştiriyoruz
+    -->
     <span><b>Search:</b></span>
     <!--  <input type="text" (input) ='changesearchValue($event)'>  -->
     <input type="text" [(ngModel)] ="searchValue">
 
     <!--Aradığım kelimeyi altta gösteriyor-->
-    <span>Your searched for "{{ searchValue }}"</span>
+    <!--Koşulda true dönerse yazı gösterilir. False dönerse kaldırılır.-->
+    <span *ngIf="searchValue != '' ">Your searched for "{{ searchValue }}"</span>
 </div>
